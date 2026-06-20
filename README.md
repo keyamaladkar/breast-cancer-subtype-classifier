@@ -1,7 +1,5 @@
 # Results
 
-This folder is auto-populated when you run the notebook. It will contain:
-
 - `eda_overview.png` — class distribution and expression boxplots
 - `pipeline_comparison.png` — AUC and F1 bar charts
 - `confusion_matrices.png` — 3-panel confusion matrices
