@@ -22,12 +22,12 @@ This project benchmarks three end-to-end ML pipelines for classifying PAM50 brea
 ---
 
 ## 🏆 Results
-
-| Pipeline | Feature Selection | Classifier | Macro AUC | Macro F1 |
-|----------|------------------|------------|-----------|----------|
-| Pipeline 1 | PCA (95% variance) | Random Forest | ~0.94 | ~0.89 |
-| Pipeline 2 | LASSO (L1 regularisation) | SVM (RBF kernel) | ~0.93 | ~0.88 |
-| **Pipeline 3** | **Variance Threshold** | **XGBoost** | **~0.96 ✅** | **~0.92 ✅** |
+📊 PIPELINE COMPARISON RESULTS
+================================================================================
+                    Pipeline  Feature Selection    Classifier  Macro AUC  Macro F1  CV F1 Mean  CV F1 Std
+         PCA + Random Forest      PCA (95% var) Random Forest        1.0    0.9803      0.8718     0.0596
+           LASSO + SVM (RBF)         LASSO (L1)     SVM (RBF)        1.0    1.0000      1.0000     0.0000
+Variance Threshold + XGBoost Variance Threshold       XGBoost        1.0    1.0000      1.0000     0.0000
 
 > Results above are from simulated data. On real TCGA-BRCA data, XGBoost with variance-based pruning consistently achieved the highest AUC.
 
